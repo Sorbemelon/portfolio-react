@@ -72,7 +72,7 @@ export default function Home() {
                                 </button>
                             </Link>
                             <Link to="https://github.com/Sorbemelon"  target="_blank" className="flex items-center">
-                                <img src="/images/github-icon.svg" className="w-15 bg-lime-200 rounded-full" />
+                                <img src="/images/github-icon.svg" className="w-15 bg-amber-200 rounded-full" />
                                 <p className="text-2xl font-semibold pl-3">GitHub</p>
                             </Link>
                         </div>

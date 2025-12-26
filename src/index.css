@@ -5,7 +5,7 @@
 
 @layer base {
   h1 {
-    @apply text-3xl md:text-7xl font-semibold;
+    @apply text-4xl md:text-7xl font-semibold;
   }
 
   body {
