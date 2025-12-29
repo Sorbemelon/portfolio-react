@@ -106,19 +106,22 @@ export default function Home() {
                     <Card className="w-full border-none p-0 shadow-xl">
                         <MagicCard className={`h-full`}>
                             <div>
-                                <Link to="https://19-kanoon-colmar.vercel.app/" target="_blank">
-                                    <img src="/images/colmar-project.png" className="m-px rounded-t-2xl" />
+                                <Link to="https://19-methus-react.vercel.app/" target="_blank">
+                                    <img src="/images/user-management-2.png" className="w-fit m-px rounded-t-xl" />
                                 </Link>
                             </div>
                             <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
-                                <CardTitle className={`text-3xl`}>Colmar Project</CardTitle>
+                                <CardTitle className={`text-3xl`}>User Management Application</CardTitle>
                                 <CardDescription className={`*:mr-1 *:mb-1`}>
-                                     <Badge className={`bg-color-3`}>HTML</Badge>
+                                     <Badge className={`bg-green-600`}>React.js</Badge>
                                      <Badge className={`bg-color-2`}>Tailwind CSS</Badge>
+                                     <Badge className={`bg-blue-800`}>Node.js</Badge>
+                                     <Badge className={`bg-color-1`}>Express</Badge>
+                                     <Badge className={`bg-lime-500`}>MongoDB</Badge>
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="p-4">
-                                Front-end web development using HTML and Tailwind CSS based on UI designs.
+                                User management application integrating a back-end API with MongoDB to perform full CRUD operations.
                             </CardContent>
                         </MagicCard>
                     </Card>
@@ -164,20 +167,19 @@ export default function Home() {
                     <Card className="w-full border-none p-0 shadow-xl">
                         <MagicCard className={`h-full`}>
                             <div>
-                                <Link to="https://19-methus-react.vercel.app/" target="_blank">
-                                    <img src="/images/user-management.png" className="w-fit m-px rounded-t-xl" />
+                                <Link to="https://19-kanoon-colmar.vercel.app/" target="_blank">
+                                    <img src="/images/colmar-project.png" className="m-px rounded-t-2xl" />
                                 </Link>
                             </div>
                             <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
-                                <CardTitle className={`text-3xl`}>User Management Table</CardTitle>
+                                <CardTitle className={`text-3xl`}>Colmar Project</CardTitle>
                                 <CardDescription className={`*:mr-1 *:mb-1`}>
-                                     <Badge className={`bg-green-600`}>React.js</Badge>
+                                     <Badge className={`bg-color-3`}>HTML</Badge>
                                      <Badge className={`bg-color-2`}>Tailwind CSS</Badge>
-                                     <Badge className={`bg-blue-700`}>MockAPI</Badge>
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="p-4">
-                                Application that fetches data from MockAPI with features to create, update, and delete users (CRUD operations).
+                                Front-end web development using HTML and Tailwind CSS based on UI designs.
                             </CardContent>
                         </MagicCard>
                     </Card>
