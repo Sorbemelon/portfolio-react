@@ -28,7 +28,7 @@ export default function Home() {
                             Methus Klaewkla
                         </h1>
                         <AuroraText className="text-2xl md:text-4xl font-semibold">
-                             Aspiring Data Engineer
+                             Aspiring Software Developer & Data Engineer
                         </AuroraText>
                         <div className="flex flex-col gap-2 max-w-150 text-lg mt-4 mb-8 mx-auto">
                             <p>Currently pursuing a data engineering role and training at Generation’s Junior Software Developer Bootcamp.</p>
@@ -106,22 +106,47 @@ export default function Home() {
                     <Card className="w-full border-none p-0 shadow-xl">
                         <MagicCard className={`h-full`}>
                             <div>
+                                <Link to="https://project-tralala-react.vercel.app/" target="_blank">
+                                    <img src="/images/group-project-sprint-3.png" className="w-fit m-px rounded-t-xl" />
+                                </Link>
+                            </div>
+                            <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
+                                <CardTitle className={`text-3xl`}>Senior Care Platform</CardTitle>
+                                <CardDescription className={`*:mr-1 *:mb-1`}>
+                                     <Badge className={`bg-sky-500`}>React.js</Badge>
+                                     <Badge className={`bg-lime-500`}>Node.js</Badge>
+                                     <Badge className={`bg-gray-700`}>Express</Badge>
+                                     <Badge className={`bg-green-700`}>MongoDB</Badge>
+                                     <Badge className={`bg-purple-500`}>Gemini</Badge>
+                                     <Badge className={`bg-fuchsia-800`}>Tailwind CSS</Badge>
+                                     <Badge className={`bg-pink-300`}>Trello</Badge>
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="p-4">
+                                Senior Care Platform (Group Project): A MERN-stack application featuring an Gemini AI-powered RAG system to recommend suitable caregivers based on user queries.
+                            </CardContent>
+                        </MagicCard>
+                    </Card>
+                    <Card className="w-full border-none p-0 shadow-xl">
+                        <MagicCard className={`h-full`}>
+                            <div>
                                 <Link to="https://19-methus-react.vercel.app/" target="_blank">
-                                    <img src="/images/user-management-2.png" className="w-fit m-px rounded-t-xl" />
+                                    <img src="/images/user-management-3.png" className="w-fit m-px rounded-t-xl" />
                                 </Link>
                             </div>
                             <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
                                 <CardTitle className={`text-3xl`}>User Management Application</CardTitle>
                                 <CardDescription className={`*:mr-1 *:mb-1`}>
-                                     <Badge className={`bg-green-600`}>React.js</Badge>
-                                     <Badge className={`bg-color-2`}>Tailwind CSS</Badge>
-                                     <Badge className={`bg-blue-800`}>Node.js</Badge>
-                                     <Badge className={`bg-color-1`}>Express</Badge>
-                                     <Badge className={`bg-lime-500`}>MongoDB</Badge>
+                                     <Badge className={`bg-sky-500`}>React.js</Badge>
+                                     <Badge className={`bg-lime-500`}>Node.js</Badge>
+                                     <Badge className={`bg-gray-700`}>Express</Badge>
+                                     <Badge className={`bg-green-700`}>MongoDB</Badge>
+                                     <Badge className={`bg-purple-500`}>Gemini</Badge>
+                                     <Badge className={`bg-fuchsia-800`}>Tailwind CSS</Badge>
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="p-4">
-                                User management application integrating a back-end API with MongoDB to perform full CRUD operations.
+                                User Management Application: A MERN-stack application supporting full CRUD operations, with an AI-powered RAG embedding–based user search using Gemini AI.
                             </CardContent>
                         </MagicCard>
                     </Card>
@@ -135,9 +160,9 @@ export default function Home() {
                             <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
                                 <CardTitle className={`text-3xl`}>20-Sided Dice Roller</CardTitle>
                                 <CardDescription className={`*:mr-1 *:mb-1`}>
-                                     <Badge className={`bg-color-3`}>HTML</Badge>
-                                     <Badge className={`bg-color-2`}>Tailwind CSS</Badge>
-                                     <Badge className={`bg-amber-500`}>Javascript</Badge>
+                                     <Badge className={`bg-red-700`}>HTML</Badge>
+                                     <Badge className={`bg-fuchsia-800`}>Tailwind CSS</Badge>
+                                     <Badge className={`bg-amber-600`}>Javascript</Badge>
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="p-4">
@@ -155,8 +180,8 @@ export default function Home() {
                             <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
                                 <CardTitle className={`text-3xl`}>Rainbow Castle Room</CardTitle>
                                 <CardDescription className={`*:mr-1 *:mb-1`}>
-                                     <Badge className={`bg-green-600`}>React.js</Badge>
-                                     <Badge className={`bg-color-2`}>Tailwind CSS</Badge>
+                                     <Badge className={`bg-sky-500`}>React.js</Badge>
+                                     <Badge className={`bg-fuchsia-800`}>Tailwind CSS</Badge>
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="p-4">
@@ -174,55 +199,12 @@ export default function Home() {
                             <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
                                 <CardTitle className={`text-3xl`}>Colmar Project</CardTitle>
                                 <CardDescription className={`*:mr-1 *:mb-1`}>
-                                     <Badge className={`bg-color-3`}>HTML</Badge>
-                                     <Badge className={`bg-color-2`}>Tailwind CSS</Badge>
+                                     <Badge className={`bg-red-700`}>HTML</Badge>
+                                     <Badge className={`bg-fuchsia-800`}>Tailwind CSS</Badge>
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="p-4">
                                 Front-end web development using HTML and Tailwind CSS based on UI designs.
-                            </CardContent>
-                        </MagicCard>
-                    </Card>
-                    <Card className="w-full border-none p-0 shadow-xl">
-                        <MagicCard className={`h-full`}>
-                            <div>
-                                <Link to="https://jsd11-group-project-git-tralala.vercel.app/" target="_blank">
-                                    <img src="/images/group-project-sprint-1.png" className="w-fit m-px rounded-t-xl" />
-                                </Link>
-                            </div>
-                            <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
-                                <CardTitle className={`text-3xl`}>Group Project (Sprint 1)</CardTitle>
-                                <CardDescription className={`*:mr-1 *:mb-1`}>
-                                     <Badge className={`bg-color-3`}>HTML</Badge>
-                                     <Badge className={`bg-color-2`}>Tailwind CSS</Badge>
-                                     <Badge className={`bg-pink-300`}>Trello</Badge>
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="p-4">
-                                Senior care platform (group project) covering business planning, database schema design, and front-end development using HTML and Tailwind CSS.
-                            </CardContent>
-                        </MagicCard>
-                    </Card>
-                    <Card className="w-full border-none p-0 shadow-xl">
-                        <MagicCard className={`h-full`}>
-                            <div>
-                                <Link to="https://project-tralala-react.vercel.app/" target="_blank">
-                                    <img src="/images/group-project-sprint-1.png" className="w-fit m-px rounded-t-xl" />
-                                </Link>
-                            </div>
-                            <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
-                                <CardTitle className={`text-3xl`}>Group Project (Sprint 2)</CardTitle>
-                                <CardDescription className={`*:mr-1 *:mb-1`}>
-                                     <Badge className={`bg-green-600`}>React.js</Badge>
-                                     <Badge className={`bg-color-2`}>Tailwind CSS</Badge>
-                                     <Badge className={`bg-blue-800`}>Node.js</Badge>
-                                     <Badge className={`bg-color-1`}>Express</Badge>
-                                     <Badge className={`bg-lime-500`}>MongoDB</Badge>
-                                     <Badge className={`bg-pink-300`}>Trello</Badge>
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="p-4">
-                                Ongoing project migrating a senior care platform from Sprint 1 to React and developing a RESTful back-end with Node.js and Express, including mock data generation (Sprint 2 in progress)
                             </CardContent>
                         </MagicCard>
                     </Card>
@@ -254,8 +236,8 @@ export default function Home() {
                             <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
                                 <CardTitle className={`text-3xl`}>Find Your Hat Game</CardTitle>
                                 <CardDescription className={`*:mr-1 *:mb-1`}>
-                                     <Badge className={`bg-amber-500`}>Javascript</Badge>
-                                     <Badge className={`bg-orange-500`}>Typescript</Badge>
+                                     <Badge className={`bg-amber-600`}>Javascript</Badge>
+                                     <Badge className={`bg-orange-700`}>Typescript</Badge>
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="p-4">
