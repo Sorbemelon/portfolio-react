@@ -30,9 +30,9 @@ export default function Home() {
                         <AuroraText className="text-2xl md:text-4xl font-semibold">
                              Aspiring Software Developer & Data Engineer
                         </AuroraText>
-                        <div className="flex flex-col gap-2 max-w-150 text-lg mt-4 mb-8 mx-auto">
-                            <p>Currently pursuing a data engineering role and training at Generation’s Junior Software Developer Bootcamp.</p>
-                            <p>A fast learner and critical thinker with experience in Python, SQL, MongoDB, cloud technologies (AWS), shell scripting, and modern web technologies (MERN stack), interested in building reliable data pipelines and transforming raw data into actionable insights.</p>
+                        <div className="flex flex-col gap-2 max-w-150 text-lg mt-4 mb-8 *:indent-8">
+                            <p>Currently pursuing a software developer or data engineering role, with training from Generation’s Junior Software Developer Bootcamp and the AWS re/Start program.</p>
+                            <p>A fast learner and critical thinker experienced in Python, SQL, MongoDB, AWS cloud integration, shell scripting, and modern MERN-stack development. Skilled in building AI-powered RAG applications using Gemini, developing scalable data solutions, and transforming raw data into actionable insights.</p>
                         </div>
                          <ul className="pl-4 ml-7 mb-8 border-l-2 border-black text-xl font-semibold">
                             <li className="relative -left-12 flex mb-6 items-center">
@@ -103,6 +103,30 @@ export default function Home() {
             <section id="project" className="flex flex-col mt-4 mb-8">
                 <h2 className="text-center text-3xl md:text-5xl font-bold mb-12">My Projects</h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 mx-[10%] gap-12">
+                    <Card className="w-full border-none p-0 shadow-xl">
+                        <MagicCard className={`h-full`}>
+                            <div>
+                                <Link to="https://jsd11-methus-project.vercel.app/" target="_blank">
+                                    <img src="/images/autumdata-1.png" className="w-fit m-px rounded-t-xl" />
+                                </Link>
+                            </div>
+                            <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
+                                <CardTitle className={`text-3xl`}>Autumdata</CardTitle>
+                                <CardDescription className={`*:mr-1 *:mb-1`}>
+                                     <Badge className={`bg-sky-500`}>React.js</Badge>
+                                     <Badge className={`bg-lime-500`}>Node.js</Badge>
+                                     <Badge className={`bg-gray-700`}>Express</Badge>
+                                     <Badge className={`bg-green-700`}>MongoDB</Badge>
+                                     <Badge className={`bg-orange-500`}>AWS</Badge>
+                                     <Badge className={`bg-purple-500`}>Gemini</Badge>
+                                     <Badge className={`bg-fuchsia-800`}>Tailwind CSS</Badge>
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="p-4">
+                                AI Document RAG System: An AI-powered document platform built with MERN, Amazon S3, and Gemini AI that turns uploaded files into a searchable knowledge base with semantic retrieval and context-aware Q&A.
+                            </CardContent>
+                        </MagicCard>
+                    </Card>
                     <Card className="w-full border-none p-0 shadow-xl">
                         <MagicCard className={`h-full`}>
                             <div>
@@ -208,7 +232,7 @@ export default function Home() {
                             </CardContent>
                         </MagicCard>
                     </Card>
-                    <Card className="w-full border-none p-0 shadow-xl">
+                    {/* <Card className="w-full border-none p-0 shadow-xl">
                         <MagicCard className={`h-full`}>
                             <div>
                                 <Link to="https://dbdiagram.io/d/Senior-Care-Platform-691993236735e11170036981" target="_blank">
@@ -225,7 +249,7 @@ export default function Home() {
                                 SQL database design involving creation of an ER diagram for use with a senior care platform prior to conversion to a MongoDB schema
                             </CardContent>
                         </MagicCard>
-                    </Card>
+                    </Card> */}
                     <Card className="w-full border-none p-0 shadow-xl">
                         <MagicCard className={`h-full`}>
                             <div>
