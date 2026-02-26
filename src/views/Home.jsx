@@ -28,11 +28,11 @@ export default function Home() {
                             Methus Klaewkla
                         </h1>
                         <AuroraText className="text-2xl md:text-4xl font-semibold">
-                             Aspiring Software Developer & Data Engineer
+                             Aspiring AI Software Engineer & Data Engineer
                         </AuroraText>
                         <div className="flex flex-col gap-2 max-w-150 text-lg mt-4 mb-8 *:indent-8">
-                            <p>Currently pursuing a software developer or data engineering role, with training from Generation’s Junior Software Developer Bootcamp and the AWS re/Start program.</p>
-                            <p>A fast learner and critical thinker experienced in Python, SQL, MongoDB, AWS cloud integration, shell scripting, and modern MERN-stack development. Skilled in building AI-powered RAG applications using Gemini, developing scalable data solutions, and transforming raw data into actionable insights.</p>
+                            <p>Currently pursuing an AI Software Engineer or Data Engineering role, with training from Generation’s Junior Software Developer Bootcamp and the AWS re/Start program.</p>
+                            <p>A fast learner and critical thinker experienced in Python, SQL, MongoDB, AWS cloud integration, Linux, and modern MERN-stack development. Skilled in designing and implementing AI-powered RAG systems using Gemini, integrating cloud-based storage solutions, and building scalable, data-driven applications that transform raw data into actionable insights.</p>
                         </div>
                          <ul className="pl-4 ml-7 mb-8 border-l-2 border-black text-xl font-semibold">
                             <li className="relative -left-12 flex mb-6 items-center">
@@ -103,6 +103,29 @@ export default function Home() {
             <section id="project" className="flex flex-col mt-4 mb-8">
                 <h2 className="text-center text-3xl md:text-5xl font-bold mb-12">My Projects</h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 mx-[10%] gap-12">
+                    <Card className="w-full border-none p-0 shadow-xl">
+                        <MagicCard className={`h-full`}>
+                            <div>
+                                <Link to="" target="">
+                                    <img src="/images/logo_meshflow_v0.2.png" className="w-fit m-px rounded-t-xl" />
+                                </Link>
+                            </div>
+                            <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
+                                <CardTitle className={`text-3xl`}>Meshflow (In Progress)</CardTitle>
+                                <CardDescription className={`*:mr-1 *:mb-1`}>
+                                     <Badge className={`bg-gray-800`}>Next.js</Badge>
+                                     <Badge className={`bg-emerald-500`}>FastAPI</Badge>
+                                     <Badge className={`bg-cyan-700`}>PostgreSQL</Badge>
+                                     <Badge className={`bg-orange-500`}>AWS</Badge>
+                                     <Badge className={`bg-teal-700`}>OpenAI</Badge>
+                                     <Badge className={`bg-fuchsia-800`}>Tailwind CSS</Badge>
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="p-4">
+                                AI Data & Analytics Platform: An AI-powered analytics platform built with Next.js, FastAPI, PostgreSQL, Amazon S3, and OpenAI GPT that automates ELT workflows and dashboard generation. Users can upload datasets and ask questions, triggering AI-driven data transformation and automatic generation of dashboards.
+                            </CardContent>
+                        </MagicCard>
+                    </Card>
                     <Card className="w-full border-none p-0 shadow-xl">
                         <MagicCard className={`h-full`}>
                             <div>
