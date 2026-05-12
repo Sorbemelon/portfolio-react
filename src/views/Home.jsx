@@ -106,7 +106,7 @@ export default function Home() {
                     <Card className="w-full border-none p-0 shadow-xl">
                         <MagicCard className={`h-full`}>
                             <div>
-                                <Link to="" target="">
+                                <Link to="https://meshflow-app.vercel.app/" target="_blank">
                                     <img src="/images/logo_meshflow_v0.2.png" className="w-fit m-px rounded-t-xl" />
                                 </Link>
                             </div>
