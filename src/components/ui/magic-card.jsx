@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from "react"
-import { motion, useMotionTemplate, useMotionValue } from "motion/react"
+import { motion as Motion, useMotionTemplate, useMotionValue } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
@@ -59,7 +59,7 @@ export function MagicCard({
       onPointerMove={handlePointerMove}
       onPointerLeave={reset}
       onPointerEnter={reset}>
-      <motion.div
+      <Motion.div
         className="bg-border pointer-events-none absolute inset-0 rounded-[inherit] duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
@@ -71,7 +71,7 @@ export function MagicCard({
           `,
         }} />
       <div className="bg-background absolute inset-px rounded-[inherit]" />
-      <motion.div
+      <Motion.div
         className="pointer-events-none absolute inset-px rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
