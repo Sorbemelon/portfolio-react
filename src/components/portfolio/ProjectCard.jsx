@@ -40,7 +40,7 @@ export default function ProjectCard({ project }) {
                 <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
                     <CardTitle className={`text-3xl`}>{project.title}</CardTitle>
                     <CardDescription className={`*:mr-1 *:mb-1`}>
-                        <p className="text-base font-semibold text-black mb-2">{project.subtitle}</p>
+                        <p className="text-base font-semibold text-slate-900 mb-2 dark:text-slate-100">{project.subtitle}</p>
                         <Badge className={project.statusClassName}>{project.status}</Badge>
                         {project.tags.map((tag) => (
                             <Badge key={tag.label} className={tag.className}>{tag.label}</Badge>

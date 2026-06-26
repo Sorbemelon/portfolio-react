@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 export const AnimatedThemeToggler = ({
   className,
   duration = 400,
+  "aria-label": ariaLabel = "Toggle theme",
   ...props
 }) => {
   const [isDark, setIsDark] = useState(false)
@@ -31,12 +32,21 @@ export const AnimatedThemeToggler = ({
   const toggleTheme = useCallback(async () => {
     if (!buttonRef.current) return
 
+    const nextTheme = !document.documentElement.classList.contains("dark")
+    const applyTheme = () => {
+      setIsDark(nextTheme)
+      document.documentElement.classList.toggle("dark", nextTheme)
+      localStorage.setItem("theme", nextTheme ? "dark" : "light")
+    }
+
+    if (!document.startViewTransition) {
+      applyTheme()
+      return
+    }
+
     await document.startViewTransition(() => {
       flushSync(() => {
-        const newTheme = !isDark
-        setIsDark(newTheme)
-        document.documentElement.classList.toggle("dark")
-        localStorage.setItem("theme", newTheme ? "dark" : "light")
+        applyTheme()
       })
     }).ready
 
@@ -49,6 +59,10 @@ export const AnimatedThemeToggler = ({
       Math.max(top, window.innerHeight - top)
     )
 
+    if (!document.documentElement.animate) {
+      return
+    }
+
     document.documentElement.animate({
       clipPath: [
         `circle(0px at ${x}px ${y}px)`,
@@ -59,11 +73,13 @@ export const AnimatedThemeToggler = ({
       easing: "ease-in-out",
       pseudoElement: "::view-transition-new(root)",
     })
-  }, [isDark, duration])
+  }, [duration])
 
   return (
     <button
       ref={buttonRef}
+      type="button"
+      aria-label={ariaLabel}
       onClick={toggleTheme}
       className={cn(className)}
       {...props}>
