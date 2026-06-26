@@ -16,9 +16,9 @@ import { Badge } from "@/components/ui/badge";
 export default function Home() {
     return (
         <div>
-            <section className="flex flex-col min-h-dvh pt-4 gap-y-4 items-center 800 text-black">
+            <section className="relative flex flex-col min-h-dvh pt-4 gap-y-4 items-center 800 text-black">
                 <Meteors number={20} />
-                <div className="w-full flex flex-col md:flex-row justify-center md:gap-12 lg:gap-20 px-4">
+                <div className="relative z-10 w-full flex flex-col md:flex-row justify-center md:gap-12 lg:gap-20 px-4">
                     <div className="self-center">
                         <img src="/images/developer-pic-1.png" alt="Methus Klaewkla" />
                     </div>
@@ -33,11 +33,9 @@ export default function Home() {
                             Data-Driven AI Apps | Self-Driven R&D
                         </p>
                         <div className="flex flex-col gap-2 max-w-150 text-lg mt-4 mb-8 *:indent-8">
-                            <p>Building data-driven AI apps, document intelligence tools, market monitoring systems, and AI workflow applications.</p>
-                            <p>I build practical AI applications that turn complex information, documents, market signals, and workflows into useful tools.</p>
-                            <p>With a background in biochemistry and bioinformatics, I bring systematic thinking, evidence-based problem solving, and a strong ability to understand complex systems.</p>
-                            <p>I enjoy the full process of defining the problem, designing the workflow, structuring the data, prototyping, and improving reliability through testing and iteration.</p>
-                            <p>Great AI applications are not just smart outputs. They should not be built only to follow a trend, but to solve real workflow problems with clear structure, trusted data, thoughtful design, and reliability that holds up beyond the demo.</p>
+                            <p>Passionate about turning complex information, documents, market signals, and workflows into practical AI applications. I focus on data-driven AI apps, document intelligence, LLM-powered workflows, and internal tooling built around clear workflows, trusted data, and usefulness beyond the demo.</p>
+                            <p>With a background in biochemistry and bioinformatics, I bring systematic thinking, evidence-based problem solving, fast learning, and adaptability to complex systems. I enjoy defining the problem, designing the workflow, structuring the data, prototyping, and improving reliability through testing and iteration.</p>
+                            <p>My work includes Python, SQL, APIs, databases, AWS, Git/GitHub Actions, and modern AI/data tooling. Great AI applications are not just smart outputs; they should not be built only to follow a trend, but to solve real workflow problems with thoughtful design and reliability that holds up beyond the demo.</p>
                         </div>
                         <ul className="pl-4 ml-7 mb-8 border-l-2 border-black text-xl font-semibold">
                             <li className="relative -left-12 flex mb-6 items-center">
@@ -83,7 +81,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex flex-col items-center mt-auto mb-12">
+                <div className="relative z-10 w-full flex flex-col items-center mt-auto mb-12">
                     <div className="w-full flex items-center mb-4">
                         <hr className="h-0.5 w-full md:ml-30 mr-4 bg-linear-to-r from-none to-black border-none" />
                         <h3 className="text-center text-2xl font-semibold">COURSES</h3>
@@ -114,7 +112,7 @@ export default function Home() {
                     <Card className="w-full border-none p-0 shadow-xl">
                         <MagicCard className={`h-full`}>
                             <div>
-                                <Link to="https://github.com/Sorbemelon/ByteSiren" target="_blank">
+                                <Link to="https://bytesiren.pages.dev" target="_blank">
                                     <img src="/images/bytesiren_logo.png" alt="ByteSiren logo" className="h-48 w-full object-contain bg-white p-6 rounded-t-xl" />
                                 </Link>
                             </div>
@@ -135,9 +133,12 @@ export default function Home() {
                             <CardContent className="p-4">
                                 A public AI-assisted crypto market monitoring app that combines deterministic signal detection, Binance public market data, Cloudflare infrastructure, and optional Claude context. Built to show bounded AI enrichment, source-aware market context, and production-safe public deployment.
                             </CardContent>
-                            <CardFooter className="p-4 pt-0">
+                            <CardFooter className="p-4 pt-0 gap-4">
                                 <Link to="https://github.com/Sorbemelon/ByteSiren" target="_blank" className="font-semibold underline">
                                     GitHub
+                                </Link>
+                                <Link to="https://bytesiren.pages.dev" target="_blank" className="font-semibold underline">
+                                    Live
                                 </Link>
                             </CardFooter>
                         </MagicCard>
@@ -145,7 +146,7 @@ export default function Home() {
                     <Card className="w-full border-none p-0 shadow-xl">
                         <MagicCard className={`h-full`}>
                             <div>
-                                <Link to="https://github.com/Sorbemelon/CentralDocs" target="_blank">
+                                <Link to="https://centraldocsai.vercel.app" target="_blank">
                                     <img src="/images/centraldocs_logo.png" alt="CentralDocs logo" className="h-48 w-full object-contain bg-white p-6 rounded-t-xl" />
                                 </Link>
                             </div>
@@ -168,9 +169,12 @@ export default function Home() {
                             <CardContent className="p-4">
                                 An AI-powered document workspace for managing documents, semantic search, selected-document chat, source-grounded answers, and generated downloadable documents. Designed as a practical document intelligence app beyond a basic PDF chatbot.
                             </CardContent>
-                            <CardFooter className="p-4 pt-0">
+                            <CardFooter className="p-4 pt-0 gap-4">
                                 <Link to="https://github.com/Sorbemelon/CentralDocs" target="_blank" className="font-semibold underline">
                                     GitHub
+                                </Link>
+                                <Link to="https://centraldocsai.vercel.app" target="_blank" className="font-semibold underline">
+                                    Live
                                 </Link>
                             </CardFooter>
                         </MagicCard>
@@ -178,7 +182,7 @@ export default function Home() {
                     <Card className="w-full border-none p-0 shadow-xl">
                         <MagicCard className={`h-full`}>
                             <div>
-                                <Link to="https://meshflow-app.vercel.app/" target="_blank">
+                                <Link to="https://meshflow-app.vercel.app" target="_blank">
                                     <img src="/images/meshflow_logo.png" alt="MeshFlow logo" className="h-48 w-full object-contain bg-white p-6 rounded-t-xl" />
                                 </Link>
                             </div>
@@ -199,9 +203,12 @@ export default function Home() {
                             <CardContent className="p-4">
                                 An AI/data analytics workspace for dataset workflows, AI-assisted analysis, query/result handling, and dashboard-oriented insights. Designed to help users move from raw data toward explainable analysis through a structured AI analytics workflow.
                             </CardContent>
-                            <CardFooter className="p-4 pt-0">
-                                <Link to="https://meshflow-app.vercel.app/" target="_blank" className="font-semibold underline">
-                                    Live app
+                            <CardFooter className="p-4 pt-0 gap-4">
+                                <Link to="https://github.com/Sorbemelon/MeshFlow-app" target="_blank" className="font-semibold underline">
+                                    GitHub
+                                </Link>
+                                <Link to="https://meshflow-app.vercel.app" target="_blank" className="font-semibold underline">
+                                    Live
                                 </Link>
                             </CardFooter>
                         </MagicCard>

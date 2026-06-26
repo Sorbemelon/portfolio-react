@@ -5,8 +5,14 @@ Portfolio website for my AI Application Engineer direction, focused on data-driv
 ## Featured Projects
 
 - **ByteSiren** - AI-assisted crypto market monitoring app using deterministic signals, Binance public data, Claude context, and Cloudflare deployment.
+  - GitHub: https://github.com/Sorbemelon/ByteSiren
+  - Live: https://bytesiren.pages.dev
 - **CentralDocs** - AI document workspace for semantic search, selected-document chat, source-grounded answers, and generated downloadable documents.
+  - GitHub: https://github.com/Sorbemelon/CentralDocs
+  - Live: https://centraldocsai.vercel.app
 - **MeshFlow** - AI analytics workspace for dataset workflows, AI-assisted analysis, and dashboard-oriented insights.
+  - GitHub: https://github.com/Sorbemelon/MeshFlow-app
+  - Live: https://meshflow-app.vercel.app
 - **CrossHelix** - internal tooling concept for AI agent repo context integrity.
 - **Scopian** - internal tooling concept for AI scope/source-of-truth guardrails.
 

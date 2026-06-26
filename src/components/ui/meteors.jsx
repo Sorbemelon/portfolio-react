@@ -27,7 +27,7 @@ export const Meteors = ({
   }, [number, minDelay, maxDelay, minDuration, maxDuration, angle])
 
   return (
-    <>
+    <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
       {[...meteorStyles].map((style, idx) => (
         // Meteor Head
         (<span
@@ -42,6 +42,6 @@ export const Meteors = ({
             className="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-zinc-500 to-transparent" />
         </span>)
       ))}
-    </>
+    </div>
   );
 }
