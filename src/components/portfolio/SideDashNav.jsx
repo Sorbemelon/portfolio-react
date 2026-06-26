@@ -37,7 +37,7 @@ export default function SideDashNav() {
     return (
         <nav
             aria-label="Section navigation"
-            className="fixed left-4 top-1/2 z-40 hidden -translate-y-1/2 lg:block"
+            className="fixed left-4 top-1/2 z-40 hidden -translate-y-1/2 min-[1400px]:block"
         >
             <div className="relative flex flex-col gap-3 px-3 py-4">
                 {sectionNavItems.map((item) => {
@@ -51,7 +51,7 @@ export default function SideDashNav() {
                             aria-current={isActive ? "location" : undefined}
                             onClick={() => setActiveId(item.id)}
                             title={item.label}
-                            className="group flex min-h-8 items-center gap-3 rounded-full px-1 py-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+                            className="group flex min-h-8 items-center gap-2 rounded-full py-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
                         >
                             <span
                                 className={cn(
@@ -63,10 +63,10 @@ export default function SideDashNav() {
                             />
                             <span
                                 className={cn(
-                                    "whitespace-nowrap text-xs font-semibold transition duration-300",
+                                    "inline-block max-w-0 -translate-x-1 overflow-hidden whitespace-nowrap text-xs font-semibold opacity-0 transition-all duration-300 group-hover:max-w-24 group-hover:translate-x-0 group-hover:opacity-100 2xl:max-w-24 2xl:translate-x-0 2xl:opacity-100",
                                     isActive
-                                        ? "translate-x-0 text-sky-700 opacity-100 dark:text-cyan-200"
-                                        : "-translate-x-1 text-slate-500 opacity-0 group-hover:translate-x-0 group-hover:text-slate-800 group-hover:opacity-100 dark:text-slate-400 dark:group-hover:text-slate-100"
+                                        ? "text-sky-700 dark:text-cyan-200"
+                                        : "text-slate-500 group-hover:text-slate-800 dark:text-slate-400 dark:group-hover:text-slate-100"
                                 )}
                             >
                                 {item.label}

@@ -2,29 +2,32 @@ import { trainingIntro, trainingItems } from "@/data/training";
 
 export default function TrainingSection() {
     return (
-        <section id="training" className="mt-4 mb-12 flex scroll-mt-24 flex-col items-center">
-            <div className="w-full flex items-center mb-4">
-                <hr className="h-0.5 w-full md:ml-30 mr-4 bg-linear-to-r from-none to-black border-none dark:to-slate-500" />
-                <h2 className="text-center text-2xl md:text-3xl font-semibold">Training</h2>
-                <hr className="h-0.5 w-full ml-4 md:mr-30 bg-linear-to-l from-none to-black border-none dark:to-slate-500" />
-            </div>
-            <p className="text-center text-lg max-w-3xl mx-auto px-4 mb-8">
-                {trainingIntro}
-            </p>
-            <div className="flex flex-col md:flex-row gap-8 px-4">
-                {trainingItems.map((item) => (
-                    <div key={item.title} className="flex flex-col max-w-sm items-center text-center">
-                        <img src={item.image} alt={item.imageAlt} className="w-50" />
-                        <h3 className="text-xl md:text-2xl font-semibold">{item.title}</h3>
-                        <p className="mt-2 text-base">
-                            {item.description}
-                        </p>
-                    </div>
-                ))}
-            </div>
-            <div className="w-full flex mt-8">
-                    <hr className="h-0.5 w-full md:ml-30 bg-linear-to-r from-none to-black border-none dark:to-slate-500" />
-                    <hr className="h-0.5 w-full md:mr-30 bg-linear-to-l from-none to-black border-none dark:to-slate-500" />
+        <section id="training" className="scroll-mt-24 bg-background px-4 py-14 text-foreground transition-colors duration-300">
+            <div className="mx-auto max-w-7xl">
+                <div className="flex w-full items-center gap-4">
+                    <hr className="h-px flex-1 border-none bg-linear-to-r from-transparent to-slate-300 dark:to-slate-700" />
+                    <h2 className="text-center text-3xl font-bold text-slate-950 dark:text-slate-50">Training</h2>
+                    <hr className="h-px flex-1 border-none bg-linear-to-l from-transparent to-slate-300 dark:to-slate-700" />
+                </div>
+                <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-7 text-slate-600 dark:text-slate-300 md:text-lg md:leading-8">
+                    {trainingIntro}
+                </p>
+                <div className="mt-8 grid gap-5 md:grid-cols-2">
+                    {trainingItems.map((item) => (
+                        <article
+                            key={item.title}
+                            className="flex flex-col items-center rounded-2xl border border-slate-200 bg-white/85 p-6 text-center shadow-sm shadow-slate-200/60 dark:border-slate-800 dark:bg-slate-950/75 dark:shadow-blue-950/20"
+                        >
+                            <div className="flex h-24 items-center justify-center">
+                                <img src={item.image} alt={item.imageAlt} className="max-h-24 w-auto max-w-56 object-contain" />
+                            </div>
+                            <h3 className="mt-5 text-xl font-bold text-slate-950 dark:text-slate-50">{item.title}</h3>
+                            <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300 md:text-base md:leading-7">
+                                {item.description}
+                            </p>
+                        </article>
+                    ))}
+                </div>
             </div>
         </section>
     )
