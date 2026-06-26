@@ -1,6 +1,8 @@
 import AboutSection from "@/components/portfolio/AboutSection";
+import ContactSection from "@/components/portfolio/ContactSection";
 import HeroSection from "@/components/portfolio/HeroSection";
 import ProjectGrid from "@/components/portfolio/ProjectGrid";
+import TechnicalFocusSection from "@/components/portfolio/TechnicalFocusSection";
 import TrainingSection from "@/components/portfolio/TrainingSection";
 
 export default function Home() {
@@ -9,7 +11,9 @@ export default function Home() {
             <HeroSection />
             <AboutSection />
             <ProjectGrid />
+            <TechnicalFocusSection />
             <TrainingSection />
+            <ContactSection />
         </main>
     )
 }
