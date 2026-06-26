@@ -1,65 +1,152 @@
-import { Link } from "react-router-dom";
+import { ArrowUpRight, CheckCircle2, Github, GitBranch, ShieldCheck } from "lucide-react";
+
 import { MagicCard } from "@/components/ui/magic-card";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 const linkLabels = {
-  github: "GitHub",
   live: "Live",
+  github: "GitHub",
+}
+
+const linkIcons = {
+  live: ArrowUpRight,
+  github: Github,
+}
+
+const linkOrder = ["live", "github"]
+
+const statusClassNames = {
+  "Live Public Project":
+    "bg-emerald-100 text-emerald-700 dark:bg-emerald-400/10 dark:text-emerald-200",
+  "Live Demo / Public Project":
+    "bg-cyan-100 text-cyan-700 dark:bg-cyan-400/10 dark:text-cyan-200",
+  "Active Build":
+    "bg-amber-100 text-amber-700 dark:bg-amber-400/10 dark:text-amber-200",
+  "Internal AI Tool":
+    "bg-violet-100 text-violet-700 dark:bg-violet-400/10 dark:text-violet-200",
+}
+
+const internalIcons = {
+  CrossHelix: GitBranch,
+  Scopian: ShieldCheck,
+}
+
+function ProjectVisual({ project, isInternal }) {
+    if (isInternal) {
+        const Icon = internalIcons[project.title] ?? GitBranch
+
+        return (
+            <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-slate-100 text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-cyan-200 dark:ring-slate-700">
+                <Icon className="size-7" aria-hidden="true" />
+            </div>
+        )
+    }
+
+    return (
+        <div className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-white p-2 ring-1 ring-slate-200 shadow-sm dark:ring-slate-700">
+            <img src={project.image} alt={project.imageAlt} className="max-h-full max-w-full object-contain" />
+        </div>
+    )
 }
 
 export default function ProjectCard({ project }) {
-    const projectImage = (
-        <img
-            src={project.image}
-            alt={project.imageAlt}
-            className={project.imageClassName}
-        />
-    )
-    const projectLinks = Object.entries(project.links ?? {}).filter(([, href]) => href)
+    const isInternal = project.group === "internal"
+    const projectLinks = linkOrder
+        .map((type) => [type, project.links?.[type]])
+        .filter(([, href]) => href)
+    const accentColor = project.accentColor ?? "#38bdf8"
 
     return (
-        <Card className="w-full border-none p-0 shadow-xl">
-            <MagicCard className={`h-full`}>
-                <div>
-                    {project.links?.live ? (
-                        <Link to={project.links.live} target="_blank">
-                            {projectImage}
-                        </Link>
-                    ) : (
-                        projectImage
+        <article
+            style={{ "--project-accent": accentColor }}
+            className="group h-full rounded-3xl transition duration-300 hover:-translate-y-1"
+        >
+            <MagicCard
+                className="h-full rounded-3xl"
+                gradientFrom="var(--project-accent)"
+                gradientTo="rgba(148, 163, 184, 0.45)"
+                gradientColor="var(--project-accent)"
+                gradientOpacity={0.08}
+            >
+                <div
+                    className={cn(
+                        "relative flex h-full flex-col rounded-3xl border border-slate-200 bg-white/95 p-5 shadow-lg shadow-slate-200/70 transition duration-300 group-hover:border-[var(--project-accent)] group-hover:shadow-xl group-hover:shadow-slate-200 dark:border-slate-800 dark:bg-slate-950/90 dark:shadow-blue-950/20 dark:group-hover:border-[var(--project-accent)] dark:group-hover:shadow-blue-950/30",
+                        isInternal ? "gap-4" : "gap-5"
+                    )}
+                >
+                    <header className="flex items-start justify-between gap-4">
+                        <ProjectVisual project={project} isInternal={isInternal} />
+                        <Badge
+                            className={cn(
+                                "border-transparent px-3 py-1 text-xs font-semibold",
+                                statusClassNames[project.status] ?? "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200"
+                            )}
+                        >
+                            {project.status}
+                        </Badge>
+                    </header>
+
+                    <div>
+                        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                            {project.subtitle}
+                        </p>
+                        <h3 className="mt-2 text-2xl font-bold text-slate-950 dark:text-slate-50">
+                            {project.title}
+                        </h3>
+                        <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
+                            {project.description}
+                        </p>
+                    </div>
+
+                    <ul className="grid gap-2 text-sm text-slate-700 dark:text-slate-300">
+                        {project.highlights.map((highlight) => (
+                            <li key={highlight} className="flex gap-2">
+                                <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[var(--project-accent)]" aria-hidden="true" />
+                                <span>{highlight}</span>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <div className="mt-auto flex flex-wrap gap-2 border-t border-slate-200 pt-4 dark:border-slate-800">
+                        {project.tags.map((tag) => (
+                            <Badge
+                                key={tag.label}
+                                variant="outline"
+                                className="border-slate-200 bg-slate-50 text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+                            >
+                                {tag.label}
+                            </Badge>
+                        ))}
+                    </div>
+
+                    {projectLinks.length > 0 && (
+                        <div className="flex flex-wrap gap-3 pt-1">
+                            {projectLinks.map(([type, href]) => {
+                                const Icon = linkIcons[type] ?? ArrowUpRight
+
+                                return (
+                                    <a
+                                        key={type}
+                                        href={href}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className={cn(
+                                            "inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--project-accent)]",
+                                            type === "live"
+                                                ? "bg-slate-950 text-white hover:bg-[var(--project-accent)] dark:bg-cyan-300 dark:text-slate-950 dark:hover:bg-[var(--project-accent)]"
+                                                : "border border-slate-200 bg-white text-slate-800 hover:border-[var(--project-accent)] hover:text-[var(--project-accent)] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-[var(--project-accent)] dark:hover:text-[var(--project-accent)]"
+                                        )}
+                                    >
+                                        <Icon className="size-4" aria-hidden="true" />
+                                        {linkLabels[type] ?? type}
+                                    </a>
+                                )
+                            })}
+                        </div>
                     )}
                 </div>
-                <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
-                    <CardTitle className={`text-3xl`}>{project.title}</CardTitle>
-                    <CardDescription className={`*:mr-1 *:mb-1`}>
-                        <p className="text-base font-semibold text-slate-900 mb-2 dark:text-slate-100">{project.subtitle}</p>
-                        <Badge className={project.statusClassName}>{project.status}</Badge>
-                        {project.tags.map((tag) => (
-                            <Badge key={tag.label} className={tag.className}>{tag.label}</Badge>
-                        ))}
-                    </CardDescription>
-                </CardHeader>
-                <CardContent className="p-4">
-                    {project.description}
-                </CardContent>
-                {projectLinks.length > 0 && (
-                    <CardFooter className="p-4 pt-0 gap-4">
-                        {projectLinks.map(([type, href]) => (
-                            <Link key={type} to={href} target="_blank" className="font-semibold underline">
-                                {linkLabels[type] ?? type}
-                            </Link>
-                        ))}
-                    </CardFooter>
-                )}
             </MagicCard>
-        </Card>
+        </article>
     )
 }

@@ -1,14 +1,23 @@
 export const projects = [
   {
+    group: "public",
     title: "ByteSiren",
     subtitle: "AI Crypto Market Monitoring",
     status: "Live Public Project",
     statusClassName: "bg-emerald-700",
+    accentColor: "#f59e0b",
     image: "/images/bytesiren_logo.png",
     imageAlt: "ByteSiren logo",
     imageClassName: "h-48 w-full object-contain bg-white p-6 rounded-t-xl",
     description:
       "A public AI-assisted crypto market monitoring app that combines deterministic signal detection, Binance public market data, Cloudflare infrastructure, and optional Claude context. Built to show bounded AI enrichment, source-aware market context, and production-safe public deployment.",
+    highlights: [
+      "Deterministic signal detection",
+      "Binance public market data",
+      "Claude context enrichment",
+      "Cloudflare Workers/D1 deployment",
+      "Public monitoring with safety disclaimer",
+    ],
     tags: [
       { label: "Next.js", className: "bg-gray-800" },
       { label: "TypeScript", className: "bg-sky-700" },
@@ -24,15 +33,24 @@ export const projects = [
     },
   },
   {
+    group: "public",
     title: "CentralDocs",
     subtitle: "AI Document Workspace",
     status: "Live Demo / Public Project",
     statusClassName: "bg-emerald-700",
+    accentColor: "#06b6d4",
     image: "/images/centraldocs_logo.png",
     imageAlt: "CentralDocs logo",
     imageClassName: "h-48 w-full object-contain bg-white p-6 rounded-t-xl",
     description:
       "An AI-powered document workspace for managing documents, semantic search, selected-document chat, source-grounded answers, and generated downloadable documents. Designed as a practical document intelligence app beyond a basic PDF chatbot.",
+    highlights: [
+      "Document management workflow",
+      "Semantic search",
+      "Selected-document chat",
+      "Source-grounded answers",
+      "Generated downloadable documents",
+    ],
     tags: [
       { label: "React", className: "bg-sky-500" },
       { label: "Node.js", className: "bg-lime-600" },
@@ -50,15 +68,24 @@ export const projects = [
     },
   },
   {
+    group: "public",
     title: "MeshFlow",
     subtitle: "AI Analytics Workspace",
     status: "Active Build",
     statusClassName: "bg-yellow-700",
+    accentColor: "#6366f1",
     image: "/images/meshflow_logo.png",
     imageAlt: "MeshFlow logo",
     imageClassName: "h-48 w-full object-contain bg-white p-6 rounded-t-xl",
     description:
       "An AI/data analytics workspace for dataset workflows, AI-assisted analysis, query/result handling, and dashboard-oriented insights. Designed to help users move from raw data toward explainable analysis through a structured AI analytics workflow.",
+    highlights: [
+      "Dataset workflow",
+      "AI Analytics Engineer concept",
+      "Query and result handling",
+      "Dashboard-oriented insights",
+      "Explainable analysis flow",
+    ],
     tags: [
       { label: "Next.js", className: "bg-gray-800" },
       { label: "FastAPI", className: "bg-emerald-500" },
@@ -74,15 +101,24 @@ export const projects = [
     },
   },
   {
+    group: "internal",
     title: "CrossHelix",
     subtitle: "AI Agent Context Integrity",
-    status: "Internal Tooling Concept",
+    status: "Internal AI Tool",
     statusClassName: "bg-slate-700",
+    accentColor: "#d946ef",
     image: "/images/analytic-icon.webp",
     imageAlt: "CrossHelix concept icon",
     imageClassName: "h-48 w-full object-contain bg-white p-10 rounded-t-xl",
     description:
-      "An internal tooling concept for preserving repo context, decisions, sessions, and handoff information during AI-assisted development. Designed to reduce drift when coding agents work across complex repositories.",
+      "An internal AI tool for preserving repo context, decisions, sessions, and handoff information during AI-assisted development. Designed to reduce drift when coding agents work across complex repositories.",
+    highlights: [
+      "Repo context navigation",
+      "Session and decision records",
+      "Agent handoff support",
+      "Local-first concept",
+      "Repo integrity during AI-assisted development",
+    ],
     tags: [
       { label: "Python", className: "bg-blue-700" },
       { label: "CLI", className: "bg-gray-800" },
@@ -94,15 +130,24 @@ export const projects = [
     links: {},
   },
   {
+    group: "internal",
     title: "Scopian",
     subtitle: "AI Scope & Source-of-Truth Guard",
-    status: "Internal Tooling Concept",
+    status: "Internal AI Tool",
     statusClassName: "bg-slate-700",
+    accentColor: "#10b981",
     image: "/images/problem-solving.webp",
     imageAlt: "Scopian concept icon",
     imageClassName: "h-48 w-full object-contain bg-white p-10 rounded-t-xl",
     description:
-      "An internal tooling concept for keeping AI-assisted work aligned with approved scope, source files, decisions, and implementation boundaries. Designed around controlled AI workflows, explicit decisions, and safer agent collaboration.",
+      "An internal AI tool for keeping AI-assisted work aligned with approved scope, source files, decisions, and implementation boundaries. Designed around controlled AI workflows, explicit decisions, and safer agent collaboration.",
+    highlights: [
+      "Scope detection",
+      "Guides and guardrails",
+      "Source-of-truth alignment",
+      "Decision/patch/resolve workflow",
+      "Harnessed AI building",
+    ],
     tags: [
       { label: "Python", className: "bg-blue-700" },
       { label: "CLI", className: "bg-gray-800" },
