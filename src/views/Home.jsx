@@ -12,6 +12,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { projects } from "@/data/projects";
+import { trainingIntro, trainingItems } from "@/data/training";
+
+const linkLabels = {
+  github: "GitHub",
+  live: "Live",
+}
 
 export default function Home() {
     return (
@@ -88,156 +95,54 @@ export default function Home() {
                     A focused collection of AI/data applications and AI workflow tooling concepts built around practical workflows, reliability, and usefulness beyond demos.
                 </p>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 mx-[10%] gap-12">
-                    <Card className="w-full border-none p-0 shadow-xl">
-                        <MagicCard className={`h-full`}>
-                            <div>
-                                <Link to="https://bytesiren.pages.dev" target="_blank">
-                                    <img src="/images/bytesiren_logo.png" alt="ByteSiren logo" className="h-48 w-full object-contain bg-white p-6 rounded-t-xl" />
-                                </Link>
-                            </div>
-                            <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
-                                <CardTitle className={`text-3xl`}>ByteSiren</CardTitle>
-                                <CardDescription className={`*:mr-1 *:mb-1`}>
-                                    <p className="text-base font-semibold text-black mb-2">AI Crypto Market Monitoring</p>
-                                    <Badge className={`bg-emerald-700`}>Live Public Project</Badge>
-                                    <Badge className={`bg-gray-800`}>Next.js</Badge>
-                                    <Badge className={`bg-sky-700`}>TypeScript</Badge>
-                                    <Badge className={`bg-orange-600`}>Cloudflare Workers</Badge>
-                                    <Badge className={`bg-yellow-700`}>Cloudflare D1</Badge>
-                                    <Badge className={`bg-amber-600`}>Binance API</Badge>
-                                    <Badge className={`bg-purple-600`}>Claude</Badge>
-                                    <Badge className={`bg-neutral-700`}>GitHub Actions</Badge>
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="p-4">
-                                A public AI-assisted crypto market monitoring app that combines deterministic signal detection, Binance public market data, Cloudflare infrastructure, and optional Claude context. Built to show bounded AI enrichment, source-aware market context, and production-safe public deployment.
-                            </CardContent>
-                            <CardFooter className="p-4 pt-0 gap-4">
-                                <Link to="https://github.com/Sorbemelon/ByteSiren" target="_blank" className="font-semibold underline">
-                                    GitHub
-                                </Link>
-                                <Link to="https://bytesiren.pages.dev" target="_blank" className="font-semibold underline">
-                                    Live
-                                </Link>
-                            </CardFooter>
-                        </MagicCard>
-                    </Card>
-                    <Card className="w-full border-none p-0 shadow-xl">
-                        <MagicCard className={`h-full`}>
-                            <div>
-                                <Link to="https://centraldocsai.vercel.app" target="_blank">
-                                    <img src="/images/centraldocs_logo.png" alt="CentralDocs logo" className="h-48 w-full object-contain bg-white p-6 rounded-t-xl" />
-                                </Link>
-                            </div>
-                            <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
-                                <CardTitle className={`text-3xl`}>CentralDocs</CardTitle>
-                                <CardDescription className={`*:mr-1 *:mb-1`}>
-                                    <p className="text-base font-semibold text-black mb-2">AI Document Workspace</p>
-                                    <Badge className={`bg-emerald-700`}>Live Demo / Public Project</Badge>
-                                    <Badge className={`bg-sky-500`}>React</Badge>
-                                    <Badge className={`bg-lime-600`}>Node.js</Badge>
-                                    <Badge className={`bg-gray-700`}>Express</Badge>
-                                    <Badge className={`bg-green-700`}>MongoDB</Badge>
-                                    <Badge className={`bg-indigo-700`}>Vector Search</Badge>
-                                    <Badge className={`bg-orange-500`}>AWS S3</Badge>
-                                    <Badge className={`bg-purple-500`}>Gemini</Badge>
-                                    <Badge className={`bg-black`}>Vercel</Badge>
-                                    <Badge className={`bg-blue-700`}>Render</Badge>
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="p-4">
-                                An AI-powered document workspace for managing documents, semantic search, selected-document chat, source-grounded answers, and generated downloadable documents. Designed as a practical document intelligence app beyond a basic PDF chatbot.
-                            </CardContent>
-                            <CardFooter className="p-4 pt-0 gap-4">
-                                <Link to="https://github.com/Sorbemelon/CentralDocs" target="_blank" className="font-semibold underline">
-                                    GitHub
-                                </Link>
-                                <Link to="https://centraldocsai.vercel.app" target="_blank" className="font-semibold underline">
-                                    Live
-                                </Link>
-                            </CardFooter>
-                        </MagicCard>
-                    </Card>
-                    <Card className="w-full border-none p-0 shadow-xl">
-                        <MagicCard className={`h-full`}>
-                            <div>
-                                <Link to="https://meshflow-app.vercel.app" target="_blank">
-                                    <img src="/images/meshflow_logo.png" alt="MeshFlow logo" className="h-48 w-full object-contain bg-white p-6 rounded-t-xl" />
-                                </Link>
-                            </div>
-                            <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
-                                <CardTitle className={`text-3xl`}>MeshFlow</CardTitle>
-                                <CardDescription className={`*:mr-1 *:mb-1`}>
-                                    <p className="text-base font-semibold text-black mb-2">AI Analytics Workspace</p>
-                                    <Badge className={`bg-yellow-700`}>Active Build</Badge>
-                                    <Badge className={`bg-gray-800`}>Next.js</Badge>
-                                    <Badge className={`bg-emerald-500`}>FastAPI</Badge>
-                                    <Badge className={`bg-blue-700`}>Python</Badge>
-                                    <Badge className={`bg-sky-800`}>SQL</Badge>
-                                    <Badge className={`bg-cyan-700`}>PostgreSQL</Badge>
-                                    <Badge className={`bg-purple-700`}>AI Analytics</Badge>
-                                    <Badge className={`bg-fuchsia-800`}>Dashboard Workflow</Badge>
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="p-4">
-                                An AI/data analytics workspace for dataset workflows, AI-assisted analysis, query/result handling, and dashboard-oriented insights. Designed to help users move from raw data toward explainable analysis through a structured AI analytics workflow.
-                            </CardContent>
-                            <CardFooter className="p-4 pt-0 gap-4">
-                                <Link to="https://github.com/Sorbemelon/MeshFlow-app" target="_blank" className="font-semibold underline">
-                                    GitHub
-                                </Link>
-                                <Link to="https://meshflow-app.vercel.app" target="_blank" className="font-semibold underline">
-                                    Live
-                                </Link>
-                            </CardFooter>
-                        </MagicCard>
-                    </Card>
-                    <Card className="w-full border-none p-0 shadow-xl">
-                        <MagicCard className={`h-full`}>
-                            <div>
-                                <img src="/images/analytic-icon.webp" alt="CrossHelix concept icon" className="h-48 w-full object-contain bg-white p-10 rounded-t-xl" />
-                            </div>
-                            <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
-                                <CardTitle className={`text-3xl`}>CrossHelix</CardTitle>
-                                <CardDescription className={`*:mr-1 *:mb-1`}>
-                                    <p className="text-base font-semibold text-black mb-2">AI Agent Context Integrity</p>
-                                    <Badge className={`bg-slate-700`}>Internal Tooling Concept</Badge>
-                                    <Badge className={`bg-blue-700`}>Python</Badge>
-                                    <Badge className={`bg-gray-800`}>CLI</Badge>
-                                    <Badge className={`bg-cyan-700`}>SQLite</Badge>
-                                    <Badge className={`bg-purple-700`}>AI Coding Agents</Badge>
-                                    <Badge className={`bg-indigo-700`}>Repo Context</Badge>
-                                    <Badge className={`bg-green-700`}>Local-first</Badge>
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="p-4">
-                                An internal tooling concept for preserving repo context, decisions, sessions, and handoff information during AI-assisted development. Designed to reduce drift when coding agents work across complex repositories.
-                            </CardContent>
-                        </MagicCard>
-                    </Card>
-                    <Card className="w-full border-none p-0 shadow-xl">
-                        <MagicCard className={`h-full`}>
-                            <div>
-                                <img src="/images/problem-solving.webp" alt="Scopian concept icon" className="h-48 w-full object-contain bg-white p-10 rounded-t-xl" />
-                            </div>
-                            <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
-                                <CardTitle className={`text-3xl`}>Scopian</CardTitle>
-                                <CardDescription className={`*:mr-1 *:mb-1`}>
-                                    <p className="text-base font-semibold text-black mb-2">AI Scope & Source-of-Truth Guard</p>
-                                    <Badge className={`bg-slate-700`}>Internal Tooling Concept</Badge>
-                                    <Badge className={`bg-blue-700`}>Python</Badge>
-                                    <Badge className={`bg-gray-800`}>CLI</Badge>
-                                    <Badge className={`bg-rose-700`}>Scope Control</Badge>
-                                    <Badge className={`bg-indigo-700`}>Source-of-Truth</Badge>
-                                    <Badge className={`bg-purple-700`}>AI Governance</Badge>
-                                    <Badge className={`bg-green-700`}>Agent Workflow</Badge>
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="p-4">
-                                An internal tooling concept for keeping AI-assisted work aligned with approved scope, source files, decisions, and implementation boundaries. Designed around controlled AI workflows, explicit decisions, and safer agent collaboration.
-                            </CardContent>
-                        </MagicCard>
-                    </Card>
+                    {projects.map((project) => {
+                        const projectImage = (
+                            <img
+                                src={project.image}
+                                alt={project.imageAlt}
+                                className={project.imageClassName}
+                            />
+                        )
+                        const projectLinks = Object.entries(project.links ?? {}).filter(([, href]) => href)
+
+                        return (
+                            <Card key={project.title} className="w-full border-none p-0 shadow-xl">
+                                <MagicCard className={`h-full`}>
+                                    <div>
+                                        {project.links?.live ? (
+                                            <Link to={project.links.live} target="_blank">
+                                                {projectImage}
+                                            </Link>
+                                        ) : (
+                                            projectImage
+                                        )}
+                                    </div>
+                                    <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
+                                        <CardTitle className={`text-3xl`}>{project.title}</CardTitle>
+                                        <CardDescription className={`*:mr-1 *:mb-1`}>
+                                            <p className="text-base font-semibold text-black mb-2">{project.subtitle}</p>
+                                            <Badge className={project.statusClassName}>{project.status}</Badge>
+                                            {project.tags.map((tag) => (
+                                                <Badge key={tag.label} className={tag.className}>{tag.label}</Badge>
+                                            ))}
+                                        </CardDescription>
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        {project.description}
+                                    </CardContent>
+                                    {projectLinks.length > 0 && (
+                                        <CardFooter className="p-4 pt-0 gap-4">
+                                            {projectLinks.map(([type, href]) => (
+                                                <Link key={type} to={href} target="_blank" className="font-semibold underline">
+                                                    {linkLabels[type] ?? type}
+                                                </Link>
+                                            ))}
+                                        </CardFooter>
+                                    )}
+                                </MagicCard>
+                            </Card>
+                        )
+                    })}
                 </div>
             </section>
             <section id="training" className="flex flex-col items-center mt-4 mb-12">
@@ -247,23 +152,18 @@ export default function Home() {
                     <hr className="h-0.5 w-full ml-4 md:mr-30 bg-linear-to-l from-none to-black border-none" />
                 </div>
                 <p className="text-center text-lg max-w-3xl mx-auto px-4 mb-8">
-                    This training supports my foundation in software development, cloud computing, and practical AI application building.
+                    {trainingIntro}
                 </p>
                 <div className="flex flex-col md:flex-row gap-8 px-4">
-                    <div className="flex flex-col max-w-sm items-center text-center">
-                        <img src="/images/generation_thailand_logo.webp" alt="Generation Thailand" className="w-50" />
-                        <h3 className="text-xl md:text-2xl font-semibold">Generation Thailand Junior Software Developer Bootcamp</h3>
-                        <p className="mt-2 text-base">
-                            Full-stack software development foundation, team project experience, Agile workflow, Git, frontend, and backend basics.
-                        </p>
-                    </div>
-                    <div className="flex flex-col max-w-sm items-center text-center">
-                        <img src="/images/aws-restart.png" alt="AWS re/Start Thailand" className="w-50" />
-                        <h3 className="text-xl md:text-2xl font-semibold">AWS re/Start Cloud Training Program</h3>
-                        <p className="mt-2 text-base">
-                            Cloud computing foundation covering AWS services, Linux, networking, security, and cloud operations basics.
-                        </p>
-                    </div>
+                    {trainingItems.map((item) => (
+                        <div key={item.title} className="flex flex-col max-w-sm items-center text-center">
+                            <img src={item.image} alt={item.imageAlt} className="w-50" />
+                            <h3 className="text-xl md:text-2xl font-semibold">{item.title}</h3>
+                            <p className="mt-2 text-base">
+                                {item.description}
+                            </p>
+                        </div>
+                    ))}
                 </div>
                 <div className="w-full flex mt-8">
                     <hr className="h-0.5 w-full md:ml-30 bg-linear-to-r from-none to-black border-none" />
