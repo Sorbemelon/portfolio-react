@@ -81,27 +81,6 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="relative z-10 w-full flex flex-col items-center mt-auto mb-12">
-                    <div className="w-full flex items-center mb-4">
-                        <hr className="h-0.5 w-full md:ml-30 mr-4 bg-linear-to-r from-none to-black border-none" />
-                        <h3 className="text-center text-2xl font-semibold">COURSES</h3>
-                        <hr className="h-0.5 w-full ml-4 md:mr-30 bg-linear-to-l from-none to-black border-none" />
-                    </div>
-                    <div className="flex flex-col md:flex-row gap-4">
-                        <div className="flex flex-col w-70 items-center">
-                            <img src="/images/generation_thailand_logo.webp" alt="Generation Thailand" className="w-50" />
-                            <h2 className="text-xl md:text-2xl font-semibold text-center">Junior Software Developer Bootcamp #11</h2>
-                        </div>
-                        <div className="flex flex-col w-70 items-center">
-                            <img src="/images/aws-restart.png" alt="AWS re/Start Thailand" className="w-50" />
-                            <h2 className="text-xl md:text-2xl font-semibold text-center">AWS re/Start Thailand</h2>
-                        </div>
-                    </div>
-                    <div className="w-full flex mt-4">
-                        <hr className="h-0.5 w-full md:ml-30 bg-linear-to-r from-none to-black border-none" />
-                        <hr className="h-0.5 w-full md:mr-30 bg-linear-to-l from-none to-black border-none" />
-                    </div>
-                </div>
             </section>
             <section id="project" className="flex flex-col mt-4 mb-8">
                 <h2 className="text-center text-3xl md:text-5xl font-bold mb-4">Featured AI Application Projects</h2>
@@ -259,6 +238,36 @@ export default function Home() {
                             </CardContent>
                         </MagicCard>
                     </Card>
+                </div>
+            </section>
+            <section id="training" className="flex flex-col items-center mt-4 mb-12">
+                <div className="w-full flex items-center mb-4">
+                    <hr className="h-0.5 w-full md:ml-30 mr-4 bg-linear-to-r from-none to-black border-none" />
+                    <h2 className="text-center text-2xl md:text-3xl font-semibold">Training</h2>
+                    <hr className="h-0.5 w-full ml-4 md:mr-30 bg-linear-to-l from-none to-black border-none" />
+                </div>
+                <p className="text-center text-lg max-w-3xl mx-auto px-4 mb-8">
+                    This training supports my foundation in software development, cloud computing, and practical AI application building.
+                </p>
+                <div className="flex flex-col md:flex-row gap-8 px-4">
+                    <div className="flex flex-col max-w-sm items-center text-center">
+                        <img src="/images/generation_thailand_logo.webp" alt="Generation Thailand" className="w-50" />
+                        <h3 className="text-xl md:text-2xl font-semibold">Generation Thailand Junior Software Developer Bootcamp</h3>
+                        <p className="mt-2 text-base">
+                            Full-stack software development foundation, team project experience, Agile workflow, Git, frontend, and backend basics.
+                        </p>
+                    </div>
+                    <div className="flex flex-col max-w-sm items-center text-center">
+                        <img src="/images/aws-restart.png" alt="AWS re/Start Thailand" className="w-50" />
+                        <h3 className="text-xl md:text-2xl font-semibold">AWS re/Start Cloud Training Program</h3>
+                        <p className="mt-2 text-base">
+                            Cloud computing foundation covering AWS services, Linux, networking, security, and cloud operations basics.
+                        </p>
+                    </div>
+                </div>
+                <div className="w-full flex mt-8">
+                    <hr className="h-0.5 w-full md:ml-30 bg-linear-to-r from-none to-black border-none" />
+                    <hr className="h-0.5 w-full md:mr-30 bg-linear-to-l from-none to-black border-none" />
                 </div>
             </section>
         </div>
