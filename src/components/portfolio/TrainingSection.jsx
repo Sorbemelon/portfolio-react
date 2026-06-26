@@ -2,7 +2,7 @@ import { trainingIntro, trainingItems } from "@/data/training";
 
 export default function TrainingSection() {
     return (
-        <section id="training" className="flex flex-col items-center mt-4 mb-12">
+        <section id="training" className="mt-4 mb-12 flex scroll-mt-24 flex-col items-center">
             <div className="w-full flex items-center mb-4">
                 <hr className="h-0.5 w-full md:ml-30 mr-4 bg-linear-to-r from-none to-black border-none dark:to-slate-500" />
                 <h2 className="text-center text-2xl md:text-3xl font-semibold">Training</h2>

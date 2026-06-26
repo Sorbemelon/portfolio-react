@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 import { AuroraText } from "@/components/ui/aurora-text";
-import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { Meteors } from "@/components/ui/meteors";
 import { ShineBorder } from "@/components/ui/shine-border";
 import AISystemsMap from "./AISystemsMap";
@@ -23,7 +22,7 @@ const proofChips = [
 
 export default function HeroSection() {
     return (
-        <section className="relative isolate overflow-hidden bg-white text-slate-950 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-50">
+        <section id="start" className="relative isolate scroll-mt-24 overflow-hidden bg-white text-slate-950 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-50">
             <div className="absolute inset-0 -z-20 bg-[linear-gradient(135deg,#f8fafc_0%,#eef2ff_48%,#ecfeff_100%)] dark:bg-[linear-gradient(135deg,#020617_0%,#0f172a_55%,#111827_100%)]" />
             <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(15,23,42,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.08)_1px,transparent_1px)] bg-[size:44px_44px] opacity-30 dark:opacity-20" />
             <Meteors
@@ -34,13 +33,6 @@ export default function HeroSection() {
                 maxDuration={12}
                 className="max-sm:hidden bg-sky-400/25 shadow-[0_0_0_1px_rgba(14,165,233,0.12)] dark:bg-cyan-200/55"
             />
-
-            <div className="absolute right-4 top-4 z-20">
-                <AnimatedThemeToggler
-                    aria-label="Toggle light and dark theme"
-                    className="inline-flex size-11 items-center justify-center rounded-full border border-slate-200 bg-white/80 text-slate-800 shadow-lg shadow-slate-200/60 backdrop-blur transition hover:border-sky-300 hover:text-sky-700 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-100 dark:shadow-blue-950/30 dark:hover:border-cyan-400 dark:hover:text-cyan-200"
-                />
-            </div>
 
             <div className="relative z-10 mx-auto grid min-h-dvh w-full max-w-7xl items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
                 <div className="max-w-3xl">
@@ -74,7 +66,7 @@ export default function HeroSection() {
 
                     <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                         <a
-                            href="#project"
+                            href="#apps"
                             className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-5 py-3 text-base font-semibold text-white shadow-lg shadow-slate-300/60 transition hover:bg-sky-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:bg-cyan-300 dark:text-slate-950 dark:shadow-cyan-950/30 dark:hover:bg-emerald-300"
                         >
                             View Projects

@@ -3,6 +3,7 @@ import { ArrowUpRight, CheckCircle2, Github, GitBranch, ShieldCheck } from "luci
 import { MagicCard } from "@/components/ui/magic-card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { getProjectCardId } from "./project-card-id";
 
 const linkLabels = {
   live: "Live",
@@ -59,8 +60,9 @@ export default function ProjectCard({ project }) {
 
     return (
         <article
+            id={getProjectCardId(project.title)}
             style={{ "--project-accent": accentColor }}
-            className="group h-full rounded-3xl transition duration-300 hover:-translate-y-1"
+            className="group h-full scroll-mt-24 rounded-3xl transition duration-300 hover:-translate-y-1"
         >
             <MagicCard
                 className="h-full rounded-3xl"

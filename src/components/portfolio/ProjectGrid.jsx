@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 const projectSections = [
     {
+        id: "apps",
         group: "public",
         title: "Featured AI Applications",
         subtitle:
@@ -10,6 +11,7 @@ const projectSections = [
         gridClassName: "lg:grid-cols-3",
     },
     {
+        id: "tooling",
         group: "internal",
         title: "Internal AI Tools",
         subtitle:
@@ -26,7 +28,7 @@ export default function ProjectGrid() {
                     const sectionProjects = projects.filter((project) => project.group === section.group)
 
                     return (
-                        <div key={section.group}>
+                        <div key={section.group} id={section.id} className="scroll-mt-24">
                             <div className="mx-auto mb-8 max-w-4xl text-center">
                                 <h2 className="text-3xl font-bold text-slate-950 md:text-5xl dark:text-slate-50">
                                     {section.title}

@@ -1,6 +1,7 @@
 import { GitBranch, ShieldCheck } from "lucide-react";
 
 import { projects } from "@/data/projects";
+import { getProjectCardId } from "./project-card-id";
 
 const systemRows = [
     {
@@ -111,10 +112,12 @@ export default function AISystemsMap() {
                                         const project = projects.find((item) => item.title === row.title)
 
                                         return (
-                                            <div
+                                            <a
+                                                href={`#${getProjectCardId(row.title)}`}
+                                                aria-label={`View ${row.title} project card`}
                                                 key={row.title}
                                                 style={{ "--map-hover-border": row.hoverBorderColor }}
-                                                className="rounded-2xl border border-slate-200 bg-white/90 p-3 transition duration-200 hover:border-[var(--map-hover-border)] hover:shadow-md hover:shadow-slate-200 dark:border-slate-800 dark:bg-slate-950/70 dark:hover:border-[var(--map-hover-border)] dark:hover:shadow-cyan-950/30"
+                                                className="block rounded-2xl border border-slate-200 bg-white/90 p-3 transition duration-200 hover:border-[var(--map-hover-border)] hover:shadow-md hover:shadow-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--map-hover-border)] dark:border-slate-800 dark:bg-slate-950/70 dark:hover:border-[var(--map-hover-border)] dark:hover:shadow-cyan-950/30"
                                             >
                                                 <div className="flex min-w-0 gap-3">
                                                     <ProjectMark row={row} project={project} />
@@ -130,7 +133,7 @@ export default function AISystemsMap() {
                                                         <FlowText flow={row.flow} />
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         )
                                     })}
                             </div>
