@@ -10,9 +10,9 @@ Portfolio website for my AI Application Engineer direction, focused on data-driv
 - **CentralDocs** - AI document workspace for semantic search, selected-document chat, source-grounded answers, and generated downloadable documents.
   - GitHub: https://github.com/Sorbemelon/CentralDocs
   - Live: https://centraldocsai.vercel.app
-- **MeshFlow** - AI analytics workspace for dataset workflows, AI-assisted analysis, and dashboard-oriented insights.
-  - GitHub: https://github.com/Sorbemelon/MeshFlow-app
-  - Live: https://meshflow-app.vercel.app
+- **MeshFlow** - live demo AI analytics workspace for warehouse-first dataset workflows, AI-assisted analysis, and evidence-backed dashboards.
+  - GitHub: https://github.com/Sorbemelon/MeshFlow
+  - Live: https://meshflowai.vercel.app
 - **CrossHelix** - internal tooling concept for AI agent repo context integrity.
 - **Scopian** - internal tooling concept for AI scope/source-of-truth guardrails.
 

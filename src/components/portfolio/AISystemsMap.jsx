@@ -21,7 +21,7 @@ const systemRows = [
     {
         group: "Public AI Applications",
         title: "MeshFlow",
-        statusLabel: "Active Build",
+        statusLabel: "Live Demo",
         flow: ["Datasets", "AI Analytics Engineer", "Dashboards & Insights"],
         hoverBorderColor: "#6366f1",
     },
