@@ -24,7 +24,7 @@ const statusClassNames = {
     "bg-cyan-100 text-cyan-700 dark:bg-cyan-400/10 dark:text-cyan-200",
   "Active Build":
     "bg-amber-100 text-amber-700 dark:bg-amber-400/10 dark:text-amber-200",
-  "Internal AI Tool":
+  "Internal":
     "bg-violet-100 text-violet-700 dark:bg-violet-400/10 dark:text-violet-200",
 }
 

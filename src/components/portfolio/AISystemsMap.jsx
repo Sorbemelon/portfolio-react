@@ -26,28 +26,24 @@ const systemRows = [
         hoverBorderColor: "#6366f1",
     },
     {
-        group: "Internal Tooling Concepts",
+        group: "Internal AI Agents Tooling",
         title: "CrossHelix",
         statusLabel: "Internal",
-        flow: ["Repo Context Navigation", "Shared Agent Decisions", "Repo Integrity"],
+        flow: ["Repo Context Map", "Exact-Ref Retrieval", "Shared Agent Decision"],
         Icon: GitBranch,
         hoverBorderColor: "#d946ef",
     },
     {
-        group: "Internal Tooling Concepts",
+        group: "Internal AI Agents Tooling",
         title: "Scopian",
         statusLabel: "Internal",
-        flow: ["Scope Detection", "Guides & Guardrails", "Harnessed AI Building"],
+        flow: ["Scope Detection", "Ask-First Scope Guard", "Approved Decision Records"],
         Icon: ShieldCheck,
         hoverBorderColor: "#10b981",
     },
 ]
 
-const groups = ["Public AI Applications", "Internal Tooling Concepts"]
-
-const groupLabels = {
-    "Internal Tooling Concepts": "Internal AI Tools",
-}
+const groups = ["Public AI Applications", "Internal AI Agents Tooling"]
 
 function ProjectMark({ row, project }) {
     if (row.Icon) {
@@ -103,7 +99,7 @@ export default function AISystemsMap() {
                     {groups.map((group) => (
                         <div key={group}>
                             <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
-                                {groupLabels[group] ?? group}
+                                {group}
                             </h3>
                             <div className="space-y-3">
                                 {systemRows

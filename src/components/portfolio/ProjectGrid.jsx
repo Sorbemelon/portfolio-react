@@ -13,9 +13,9 @@ const projectSections = [
     {
         id: "tooling",
         group: "internal",
-        title: "Internal AI Tools",
+        title: "Internal AI Agents Tooling",
         subtitle:
-            "Private-use AI tools exploring context integrity, scope control, and safer AI-assisted work.",
+            "Private internal tools focused on context integrity, scope control, and reliable AI-assisted development workflows.",
         gridClassName: "lg:grid-cols-2",
     },
 ]
