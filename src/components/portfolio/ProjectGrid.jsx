@@ -22,7 +22,7 @@ const projectSections = [
 
 export default function ProjectGrid() {
     return (
-        <section id="project" className="bg-background px-4 py-16 text-foreground transition-colors duration-300">
+        <section id="project" className="bg-transparent px-4 py-16 text-foreground transition-colors duration-300">
             <div className="mx-auto flex max-w-7xl flex-col gap-16">
                 {projectSections.map((section) => {
                     const sectionProjects = projects.filter((project) => project.group === section.group)

@@ -29,7 +29,7 @@ const capabilities = [
 
 export default function AboutSection() {
     return (
-        <section id="about" className="scroll-mt-24 bg-background px-4 py-16 text-foreground transition-colors duration-300">
+        <section id="about" className="scroll-mt-24 bg-transparent px-4 py-16 text-foreground transition-colors duration-300">
             <div className="mx-auto max-w-7xl">
                 <div className="mx-auto max-w-4xl text-center">
                     <h2 className="text-4xl font-bold text-slate-950 md:text-6xl dark:text-slate-50">

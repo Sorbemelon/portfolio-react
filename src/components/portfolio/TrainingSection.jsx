@@ -2,13 +2,9 @@ import { trainingIntro, trainingItems } from "@/data/training";
 
 export default function TrainingSection() {
     return (
-        <section id="training" className="scroll-mt-24 bg-background px-4 py-14 text-foreground transition-colors duration-300">
+        <section id="training" className="scroll-mt-24 bg-transparent px-4 py-14 text-foreground transition-colors duration-300">
             <div className="mx-auto max-w-7xl">
-                <div className="flex w-full items-center gap-4">
-                    <hr className="h-px flex-1 border-none bg-linear-to-r from-transparent to-slate-300 dark:to-slate-700" />
-                    <h2 className="text-center text-3xl font-bold text-slate-950 dark:text-slate-50">Training</h2>
-                    <hr className="h-px flex-1 border-none bg-linear-to-l from-transparent to-slate-300 dark:to-slate-700" />
-                </div>
+                <h2 className="text-center text-3xl font-bold text-slate-950 dark:text-slate-50">Training</h2>
                 <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-7 text-slate-600 dark:text-slate-300 md:text-lg md:leading-8">
                     {trainingIntro}
                 </p>

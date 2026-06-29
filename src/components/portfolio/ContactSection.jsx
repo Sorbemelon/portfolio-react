@@ -19,7 +19,7 @@ const contactLinks = [
 
 export default function ContactSection() {
     return (
-        <section id="contact" className="scroll-mt-24 bg-background px-4 pb-8 pt-10 text-foreground transition-colors duration-300">
+        <section id="contact" className="scroll-mt-24 bg-transparent px-4 pb-8 pt-10 text-foreground transition-colors duration-300">
             <div className="mx-auto max-w-7xl">
                 <div className="rounded-3xl border border-slate-200 bg-white/90 p-6 text-center shadow-lg shadow-slate-200/70 dark:border-slate-800 dark:bg-slate-950/85 dark:shadow-blue-950/20 md:p-8">
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">

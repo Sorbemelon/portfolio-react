@@ -54,7 +54,7 @@ const focusItems = [
 
 export default function TechnicalFocusSection() {
     return (
-        <section id="focus" className="scroll-mt-24 bg-background px-4 py-16 text-foreground transition-colors duration-300">
+        <section id="focus" className="scroll-mt-24 bg-transparent px-4 py-16 text-foreground transition-colors duration-300">
             <div className="mx-auto max-w-7xl">
                 <div className="mx-auto max-w-4xl text-center">
                     <h2 className="text-3xl font-bold text-slate-950 md:text-5xl dark:text-slate-50">
