@@ -1,6 +1,6 @@
-# Methus Klaewkla - AI Application Engineer Portfolio
+# Methus Klaewkla - Cloud, AI & Data Portfolio
 
-Portfolio website for my AI Application Engineer direction, focused on data-driven AI applications, document intelligence, market monitoring, LLM-powered workflows, and internal AI tooling concepts.
+Portfolio website covering my work across cloud, AI, and data: data-driven applications, document intelligence, market monitoring, LLM-powered workflows, and internal AI tooling concepts.
 
 ## Featured Projects
 

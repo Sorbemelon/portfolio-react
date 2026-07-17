@@ -40,13 +40,13 @@ export default function HeroSection() {
                         Methus Klaewkla
                     </p>
                     <h1 className="max-w-4xl text-5xl font-semibold leading-tight md:text-7xl">
-                        <AuroraText>AI Application Engineer</AuroraText>
+                        <AuroraText>Cloud · AI · Data</AuroraText>
                     </h1>
                     <p className="mt-4 text-xl font-semibold text-slate-700 md:text-2xl dark:text-slate-200">
-                        Data-Driven AI Apps | Self-Driven R&D
+                        Cloud | Data-Driven AI Apps | Self-Driven R&D
                     </p>
                     <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-                        Building data-driven AI apps, document intelligence tools, market monitoring systems, and AI workflow applications.
+                        Building data-driven applications, document intelligence tools, market monitoring systems, and AI workflows — deployed and running in the cloud.
                     </p>
                     <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300">
                         I focus on practical AI systems beyond simple demos: clear workflows, trusted data, source-grounded outputs, guardrails, and reliability that holds up in real use.
