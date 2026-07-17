@@ -1,4 +1,4 @@
-import { ArrowUpRight, CheckCircle2, Github, GitBranch, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Github, GitBranch } from "lucide-react";
 
 import { MagicCard } from "@/components/ui/magic-card";
 import { Badge } from "@/components/ui/badge";
@@ -22,20 +22,13 @@ const statusClassNames = {
     "bg-emerald-100 text-emerald-700 dark:bg-emerald-400/10 dark:text-emerald-200",
   "Live Demo / Public Project":
     "bg-cyan-100 text-cyan-700 dark:bg-cyan-400/10 dark:text-cyan-200",
-  "Active Build":
-    "bg-amber-100 text-amber-700 dark:bg-amber-400/10 dark:text-amber-200",
   "Internal":
     "bg-violet-100 text-violet-700 dark:bg-violet-400/10 dark:text-violet-200",
 }
 
-const internalIcons = {
-  CrossHelix: GitBranch,
-  Scopian: ShieldCheck,
-}
-
 function ProjectVisual({ project, isInternal }) {
     if (isInternal) {
-        const Icon = internalIcons[project.title] ?? GitBranch
+        const Icon = project.Icon ?? GitBranch
 
         return (
             <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-slate-100 text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-cyan-200 dark:ring-slate-700">

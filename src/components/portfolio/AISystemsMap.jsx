@@ -1,53 +1,14 @@
-import { GitBranch, ShieldCheck } from "lucide-react";
-
 import { projects } from "@/data/projects";
 import { getProjectCardId } from "./project-card-id";
 
-const systemRows = [
-    {
-        group: "Public AI Applications",
-        title: "ByteSiren",
-        statusLabel: "Live Public",
-        flow: ["Market Signals", "Deterministic Detection", "AI Review"],
-        hoverBorderColor: "#f59e0b",
-    },
-    {
-        group: "Public AI Applications",
-        title: "CentralDocs",
-        statusLabel: "Live Demo",
-        flow: ["Managed Documents", "Semantic Search", "Source-Grounded Answers"],
-        hoverBorderColor: "#06b6d4",
-    },
-    {
-        group: "Public AI Applications",
-        title: "MeshFlow",
-        statusLabel: "Live Demo",
-        flow: ["Datasets", "AI Analytics Engineer", "Dashboards & Insights"],
-        hoverBorderColor: "#6366f1",
-    },
-    {
-        group: "Internal AI Agents Tooling",
-        title: "CrossHelix",
-        statusLabel: "Internal",
-        flow: ["Repo Context Map", "Exact-Ref Retrieval", "Shared Agent Decision"],
-        Icon: GitBranch,
-        hoverBorderColor: "#d946ef",
-    },
-    {
-        group: "Internal AI Agents Tooling",
-        title: "Scopian",
-        statusLabel: "Internal",
-        flow: ["Scope Detection", "Ask-First Scope Guard", "Approved Decision Records"],
-        Icon: ShieldCheck,
-        hoverBorderColor: "#10b981",
-    },
+const groups = [
+    { key: "public", label: "Public AI Applications" },
+    { key: "internal", label: "Internal AI Agents Tooling" },
 ]
 
-const groups = ["Public AI Applications", "Internal AI Agents Tooling"]
-
-function ProjectMark({ row, project }) {
-    if (row.Icon) {
-        const Icon = row.Icon
+function ProjectMark({ project }) {
+    if (project.Icon) {
+        const Icon = project.Icon
 
         return (
             <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-100 text-slate-700 shadow-sm dark:border-slate-700 dark:bg-slate-900 dark:text-cyan-200">
@@ -97,41 +58,37 @@ export default function AISystemsMap() {
 
                 <div className="mt-4 space-y-5">
                     {groups.map((group) => (
-                        <div key={group}>
+                        <div key={group.key}>
                             <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
-                                {group}
+                                {group.label}
                             </h3>
                             <div className="space-y-3">
-                                {systemRows
-                                    .filter((row) => row.group === group)
-                                    .map((row) => {
-                                        const project = projects.find((item) => item.title === row.title)
-
-                                        return (
-                                            <a
-                                                href={`#${getProjectCardId(row.title)}`}
-                                                aria-label={`View ${row.title} project card`}
-                                                key={row.title}
-                                                style={{ "--map-hover-border": row.hoverBorderColor }}
-                                                className="block rounded-2xl border border-slate-200 bg-white/90 p-3 transition duration-200 hover:border-[var(--map-hover-border)] hover:shadow-md hover:shadow-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--map-hover-border)] dark:border-slate-800 dark:bg-slate-950/70 dark:hover:border-[var(--map-hover-border)] dark:hover:shadow-cyan-950/30"
-                                            >
-                                                <div className="flex min-w-0 gap-3">
-                                                    <ProjectMark row={row} project={project} />
-                                                    <div className="min-w-0 flex-1">
-                                                        <div className="flex flex-wrap items-center gap-2">
-                                                            <h4 className="text-base font-semibold text-slate-950 dark:text-slate-50">
-                                                                {row.title}
-                                                            </h4>
-                                                            <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-                                                                {row.statusLabel}
-                                                            </span>
-                                                        </div>
-                                                        <FlowText flow={row.flow} />
+                                {projects
+                                    .filter((project) => project.group === group.key)
+                                    .map((project) => (
+                                        <a
+                                            href={`#${getProjectCardId(project.title)}`}
+                                            aria-label={`View ${project.title} project card`}
+                                            key={project.title}
+                                            style={{ "--map-hover-border": project.accentColor }}
+                                            className="block rounded-2xl border border-slate-200 bg-white/90 p-3 transition duration-200 hover:border-[var(--map-hover-border)] hover:shadow-md hover:shadow-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--map-hover-border)] dark:border-slate-800 dark:bg-slate-950/70 dark:hover:border-[var(--map-hover-border)] dark:hover:shadow-cyan-950/30"
+                                        >
+                                            <div className="flex min-w-0 gap-3">
+                                                <ProjectMark project={project} />
+                                                <div className="min-w-0 flex-1">
+                                                    <div className="flex flex-wrap items-center gap-2">
+                                                        <h4 className="text-base font-semibold text-slate-950 dark:text-slate-50">
+                                                            {project.title}
+                                                        </h4>
+                                                        <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                                                            {project.statusLabel}
+                                                        </span>
                                                     </div>
+                                                    <FlowText flow={project.flow} />
                                                 </div>
-                                            </a>
-                                        )
-                                    })}
+                                            </div>
+                                        </a>
+                                    ))}
                             </div>
                         </div>
                     ))}

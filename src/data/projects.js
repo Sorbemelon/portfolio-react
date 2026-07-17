@@ -1,14 +1,16 @@
+import { GitBranch, ShieldCheck } from "lucide-react";
+
 export const projects = [
   {
     group: "public",
     title: "ByteSiren",
     subtitle: "AI Crypto Market Monitoring",
     status: "Live Public Project",
-    statusClassName: "bg-emerald-700",
+    statusLabel: "Live Public",
+    flow: ["Market Signals", "Deterministic Detection", "AI Review"],
     accentColor: "#f59e0b",
     image: "/images/bytesiren_logo.png",
     imageAlt: "ByteSiren logo",
-    imageClassName: "h-48 w-full object-contain bg-white p-6 rounded-t-xl",
     description:
       "A public AI-assisted crypto market monitoring app that combines deterministic signal detection, Binance public market data, Cloudflare infrastructure, and optional Claude context. Built to show bounded AI enrichment, source-aware market context, and production-safe public deployment.",
     highlights: [
@@ -37,11 +39,11 @@ export const projects = [
     title: "CentralDocs",
     subtitle: "AI Document Workspace",
     status: "Live Demo / Public Project",
-    statusClassName: "bg-emerald-700",
+    statusLabel: "Live Demo",
+    flow: ["Managed Documents", "Semantic Search", "Source-Grounded Answers"],
     accentColor: "#06b6d4",
     image: "/images/centraldocs_logo.png",
     imageAlt: "CentralDocs logo",
-    imageClassName: "h-48 w-full object-contain bg-white p-6 rounded-t-xl",
     description:
       "An AI-powered document workspace for managing documents, semantic search, selected-document chat, source-grounded answers, and generated downloadable documents. Designed as a practical document intelligence app beyond a basic PDF chatbot.",
     highlights: [
@@ -72,11 +74,11 @@ export const projects = [
     title: "MeshFlow",
     subtitle: "Warehouse-First AI Analytics Demo",
     status: "Live Demo / Public Project",
-    statusClassName: "bg-cyan-700",
+    statusLabel: "Live Demo",
+    flow: ["Datasets", "AI Analytics Engineer", "Dashboards & Insights"],
     accentColor: "#6366f1",
     image: "/images/meshflow_logo.png",
     imageAlt: "MeshFlow logo",
-    imageClassName: "h-48 w-full object-contain bg-white p-6 rounded-t-xl",
     description:
       "An AI analytics workspace for dataset intake, warehouse-oriented data preparation, AI-assisted analytics engineering, dashboard cards, and inspectable evidence. Designed as a practical analytics engineering app beyond a basic CSV chatbot or chart demo.",
     highlights: [
@@ -107,11 +109,10 @@ export const projects = [
     title: "CrossHelix",
     subtitle: "AI Agent Context Integrity",
     status: "Internal",
-    statusClassName: "bg-slate-700",
+    statusLabel: "Internal",
+    flow: ["Repo Context Map", "Exact-Ref Retrieval", "Shared Agent Decision"],
+    Icon: GitBranch,
     accentColor: "#d946ef",
-    image: "/images/analytic-icon.webp",
-    imageAlt: "CrossHelix icon",
-    imageClassName: "h-48 w-full object-contain bg-white p-10 rounded-t-xl",
     description:
       "An internal AI tool for preserving repo context, decisions, sessions, and handoff information during AI-assisted development. Designed to reduce drift when coding agents work across complex repositories through a private local CLI with deterministic exact-reference retrieval and no LLM calls.",
     highlights: [
@@ -136,11 +137,10 @@ export const projects = [
     title: "Scopian",
     subtitle: "AI Scope & Source-of-Truth Guard",
     status: "Internal",
-    statusClassName: "bg-slate-700",
+    statusLabel: "Internal",
+    flow: ["Scope Detection", "Ask-First Scope Guard", "Approved Decision Records"],
+    Icon: ShieldCheck,
     accentColor: "#10b981",
-    image: "/images/problem-solving.webp",
-    imageAlt: "Scopian icon",
-    imageClassName: "h-48 w-full object-contain bg-white p-10 rounded-t-xl",
     description:
       "An internal AI tool for keeping AI-assisted work aligned with approved scope, source files, decisions, and implementation boundaries. Designed around ask-first guardrails that stop risky changes for confirmation, cite scope evidence, and record approved decisions locally with no LLM calls or embeddings.",
     highlights: [
