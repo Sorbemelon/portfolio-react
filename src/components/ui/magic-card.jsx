@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react"
+import { useCallback, useEffect } from "react"
 import { motion as Motion, useMotionTemplate, useMotionValue } from "motion/react"
 
 import { cn } from "@/lib/utils"
