@@ -50,10 +50,10 @@ export default function AboutSection() {
                         </p>
                         <div className="mt-4 space-y-4 text-base leading-8 text-slate-700 dark:text-slate-300">
                             <p>
-                                I focus on AI Application Engineering: building data-driven AI apps, document intelligence tools, LLM-powered workflows, and internal tooling that turn complex information into practical products.
+                                I work AI-assisted: I define the problem, design the workflow and data, then direct and review the build — turning complex information into practical products across data-driven apps, document intelligence, LLM-powered workflows, and internal tooling.
                             </p>
                             <p>
-                                With a background in biochemistry and bioinformatics, I bring systematic thinking, evidence-based problem solving, fast learning, and adaptability to complex systems. I enjoy defining the problem, designing the workflow, structuring the data, prototyping, and improving reliability through testing and iteration.
+                                With a background in biochemistry and bioinformatics, I bring systematic thinking, evidence-based problem solving, fast learning, and adaptability to complex systems. My focus is on the parts that decide whether a system holds up: framing the problem, structuring the data, and improving reliability through testing and iteration.
                             </p>
                         </div>
                     </article>
