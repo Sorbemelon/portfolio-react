@@ -1,4 +1,4 @@
-import { ArrowUpRight, CheckCircle2, Github, GitBranch } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Github, GitBranch, PencilRuler } from "lucide-react";
 
 import { MagicCard } from "@/components/ui/magic-card";
 import { Badge } from "@/components/ui/badge";
@@ -89,6 +89,12 @@ export default function ProjectCard({ project }) {
                         <h3 className="mt-2 text-2xl font-bold text-slate-950 dark:text-slate-50">
                             {project.title}
                         </h3>
+                        {project.role && (
+                            <p className="mt-3 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-slate-400 dark:text-slate-500">
+                                <PencilRuler className="size-3.5 shrink-0" aria-hidden="true" />
+                                {project.role}
+                            </p>
+                        )}
                         <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
                             {project.description}
                         </p>
